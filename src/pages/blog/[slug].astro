@@ -1,0 +1,71 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import CalendarDays from "@lucide/astro/icons/calendar-days";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => data.published !== false);
+
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<Layout title={`${post.data.title} — Mamata`} description={post.data.description}>
+  <article class="mx-auto max-w-3xl animate-fade-up" style="animation-delay: 0.05s">
+    <header class="mb-8 border-b border-sage-100 pb-5">
+      <p class="text-xs font-semibold uppercase tracking-[0.16em] text-sage-700">
+        Artikel Mamata
+      </p>
+      <h1 class="mt-2 font-display text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+        {post.data.title}
+      </h1>
+
+      <p class="mt-3 flex items-center gap-2 text-xs text-slate-500">
+        <CalendarDays class="h-4 w-4" />
+        <time datetime={post.data.pubDate.toISOString().split("T")[0]}>
+          {post.data.pubDate.toLocaleDateString("id-ID", {
+            day: "2-digit",
+            month: "long",
+            year: "numeric",
+          })}
+        </time>
+      </p>
+
+      {post.data.tags && post.data.tags.length > 0 && (
+        <div class="mt-3 flex flex-wrap gap-2">
+          {post.data.tags.map((tag) => (
+            <span
+              class="rounded-full bg-sage-500/10 px-2.5 py-1 text-[11px] font-medium text-sage-800"
+            >
+              #{tag}
+            </span>
+          ))}
+        </div>
+      )}
+    </header>
+
+    {post.data.heroImage && (
+      <div class="mb-8 overflow-hidden rounded-2xl bg-slate-100 shadow-sm shadow-sage-200/70">
+        <img
+          src={post.data.heroImage}
+          alt={post.data.title}
+          loading="lazy"
+          class="h-64 w-full object-cover sm:h-80"
+        />
+      </div>
+    )}
+
+    <div
+      class="prose prose-slate max-w-none prose-headings:font-display prose-headings:text-slate-900 prose-a:text-terracotta-600 prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl prose-img:ring-1 prose-img:ring-sage-100"
+    >
+      <Content />
+    </div>
+  </article>
+</Layout>
+

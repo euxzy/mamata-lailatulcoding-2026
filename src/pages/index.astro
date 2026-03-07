@@ -1,0 +1,325 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Leaf from "@lucide/astro/icons/leaf";
+import Recycle from "@lucide/astro/icons/recycle";
+import MapPin from "@lucide/astro/icons/map-pin";
+import Phone from "@lucide/astro/icons/phone";
+import Sparkles from "@lucide/astro/icons/sparkles";
+---
+
+<Layout
+  title="Mamata — Tas Rajut dari Kain Sisa &amp; Gantungan Kunci Rajut"
+  description="UMKM yang menghadirkan tas rajut dan gantungan kunci rajut dari kain sisa, dirajut dengan penuh ketelatenan untuk pecinta gaya hidup berkelanjutan."
+>
+  <section
+    aria-labelledby="hero-title"
+    class="grid items-center gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]"
+  >
+    <div class="space-y-6 animate-fade-up" style="animation-delay: 0.05s">
+      <p class="inline-flex items-center gap-2 rounded-full bg-terracotta-500/10 px-3 py-1 text-xs font-medium text-terracotta-700 ring-1 ring-terracotta-100">
+        <Sparkles class="h-3.5 w-3.5" />
+        Upcycled crochet • Handmade dengan hati
+      </p>
+
+      <h1
+        id="hero-title"
+        class="font-display text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl"
+      >
+        Rajutan hangat
+        <span class="text-terracotta-600">dari kain sisa</span>
+        untuk gaya yang lebih sadar.
+      </h1>
+
+      <p class="max-w-xl text-sm leading-relaxed text-slate-700 sm:text-base">
+        Mamata merajut kembali potongan kain sisa menjadi tas dan gantungan kunci yang
+        fungsional, estetis, dan penuh cerita. Setiap jahitan menyelamatkan limbah tekstil dan
+        mendukung pengrajin lokal.
+      </p>
+
+      <div class="flex flex-wrap items-center gap-3">
+        <a
+          href="https://wa.me/6281234567890"
+          class="inline-flex items-center gap-2 rounded-full bg-terracotta-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-terracotta-500/40 transition hover:-translate-y-0.5 hover:bg-terracotta-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta-400"
+        >
+          <Phone class="h-4 w-4" />
+          Konsultasi pesanan custom
+        </a>
+
+        <a
+          href="#about"
+          class="inline-flex items-center gap-2 text-sm font-medium text-slate-800 underline-offset-4 hover:text-terracotta-600 hover:underline"
+        >
+          <Leaf class="h-4 w-4" />
+          Kenal lebih dekat dengan Mamata
+        </a>
+      </div>
+
+      <dl class="grid max-w-lg grid-cols-3 gap-4 text-xs text-slate-700 sm:text-sm">
+        <div>
+          <dt class="font-semibold text-slate-900">Zero waste mindset</dt>
+          <dd class="mt-1 text-slate-600">Mengolah kain sisa industri garmen menjadi produk baru.</dd>
+        </div>
+        <div>
+          <dt class="font-semibold text-slate-900">Buatan tangan</dt>
+          <dd class="mt-1 text-slate-600">Dirajut perlahan oleh pengrajin lokal berpengalaman.</dd>
+        </div>
+        <div>
+          <dt class="font-semibold text-slate-900">Edisi terbatas</dt>
+          <dd class="mt-1 text-slate-600">Setiap motif unik mengikuti tekstur dan warna kain.</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="relative animate-fade-up" style="animation-delay: 0.12s">
+      <div
+        class="pointer-events-none absolute -left-4 -top-4 h-20 w-20 rounded-full bg-terracotta-500/10 blur-3xl"
+        aria-hidden="true"
+      />
+      <div
+        class="pointer-events-none absolute -bottom-6 -right-4 h-24 w-24 rounded-full bg-sage-300/40 blur-3xl"
+        aria-hidden="true"
+      />
+
+      <div
+        class="relative aspect-[4/5] overflow-hidden rounded-3xl bg-beige-50 shadow-xl shadow-terracotta-500/10 ring-1 ring-beige-100"
+      >
+        <div
+          class="absolute inset-0 bg-[radial-gradient(circle_at_top,_#f9ede4,_transparent_55%),radial-gradient(circle_at_bottom,_#d6e1d3,_transparent_55%)]"
+        />
+        <div class="relative flex h-full flex-col justify-between p-6 sm:p-8">
+          <div class="space-y-4">
+            <span
+              class="inline-flex items-center gap-2 rounded-full bg-white/80 px-3 py-1 text-xs font-medium text-slate-800 shadow-sm shadow-sage-200/70"
+            >
+              Koleksi unggulan
+            </span>
+            <p class="font-display text-2xl font-semibold text-slate-900">
+              Tas rajut sage &amp; terracotta untuk teman keseharianmu.
+            </p>
+          </div>
+          <div class="grid gap-3 text-xs text-slate-700 sm:text-sm">
+            <div
+              class="flex items-center justify-between rounded-2xl bg-white/80 px-3 py-3 shadow-sm shadow-sage-200/70 backdrop-blur"
+            >
+              <div>
+                <p class="font-medium text-slate-900">Tas Rajut dari Kain Sisa</p>
+                <p class="text-[11px] text-slate-600">
+                  Kombinasi warna earthy yang lembut dan timeless.
+                </p>
+              </div>
+              <span class="rounded-full bg-sage-500/10 px-3 py-1 text-[11px] font-semibold text-sage-700">
+                Everyday bag
+              </span>
+            </div>
+
+            <div
+              class="flex items-center justify-between rounded-2xl bg-white/60 px-3 py-3 shadow-sm shadow-terracotta-100/80 backdrop-blur"
+            >
+              <div>
+                <p class="font-medium text-slate-900">Gantungan Kunci Rajut</p>
+                <p class="text-[11px] text-slate-600">
+                  Detail kecil yang membuat tasmu makin personal.
+                </p>
+              </div>
+              <span
+                class="rounded-full bg-terracotta-500/10 px-3 py-1 text-[11px] font-semibold text-terracotta-700"
+              >
+                Small batch
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    id="about"
+    aria-labelledby="about-title"
+    class="mt-20 grid gap-10 border-t border-sage-100 pt-14 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]"
+  >
+    <div class="space-y-4 animate-fade-up" style="animation-delay: 0.05s">
+      <h2
+        id="about-title"
+        class="font-display text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl"
+      >
+        Tentang Mamata
+      </h2>
+      <p class="text-sm leading-relaxed text-slate-700 sm:text-base">
+        Mamata lahir dari kegelisahan melihat tumpukan kain sisa produksi garmen yang berakhir
+        sebagai limbah. Alih-alih dibuang, potongan-potongan ini kami pilah, padukan, lalu
+        dirajut ulang menjadi tas dan aksesoris yang hangat dan fungsional.
+      </p>
+      <p class="text-sm leading-relaxed text-slate-700 sm:text-base">
+        Setiap produk dirancang dalam jumlah terbatas, mengikuti tekstur, warna, dan karakter kain
+        sisa yang tersedia. Hasilnya adalah koleksi yang tidak hanya cantik, tetapi juga membawa
+        cerita keberlanjutan yang bisa kamu bawa ke mana pun.
+      </p>
+
+      <div class="mt-4 grid gap-4 text-sm text-slate-700 sm:grid-cols-3">
+        <div class="rounded-2xl bg-white/80 p-4 shadow-sm shadow-sage-200/70">
+          <p class="text-xs font-semibold uppercase tracking-wide text-sage-700">Nilai kami</p>
+          <p class="mt-1 font-medium text-slate-900">Hangat, tulus, dan berkelanjutan.</p>
+        </div>
+        <div class="rounded-2xl bg-white/80 p-4 shadow-sm shadow-sage-200/70">
+          <p class="text-xs font-semibold uppercase tracking-wide text-sage-700">Bahan baku</p>
+          <p class="mt-1 font-medium text-slate-900">
+            Kain sisa pilihan, benang rajut, dan aksen kayu atau logam.
+          </p>
+        </div>
+        <div class="rounded-2xl bg-white/80 p-4 shadow-sm shadow-sage-200/70">
+          <p class="text-xs font-semibold uppercase tracking-wide text-sage-700">Produk</p>
+          <p class="mt-1 font-medium text-slate-900">
+            Tas rajut sehari-hari &amp; gantungan kunci rajut untuk menemani langkahmu.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="space-y-4 animate-fade-up" style="animation-delay: 0.12s">
+      <div class="inline-flex items-center gap-2 rounded-full bg-sage-500/10 px-3 py-1 text-xs">
+        <Recycle class="h-4 w-4 text-sage-700" />
+        <span class="font-medium text-sage-800">Dari kain sisa, jadi karya berharga.</span>
+      </div>
+      <div class="space-y-3 text-sm text-slate-700">
+        <p>
+          Proses produksi Mamata dilakukan secara lokal bersama perajut yang bekerja dari rumah
+          masing-masing. Dengan begitu, mereka dapat tetap dekat dengan keluarga sambil terus
+          berkarya.
+        </p>
+        <p>
+          Kami percaya bahwa produk yang baik tidak hanya nyaman dipakai, tetapi juga membawa dampak
+          positif bagi lingkungan dan orang-orang di baliknya.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section
+    id="location"
+    aria-labelledby="location-title"
+    class="mt-20 grid gap-10 border-t border-sage-100 pt-14 lg:grid-cols-2"
+  >
+    <div class="space-y-4 animate-fade-up" style="animation-delay: 0.05s">
+      <h2
+        id="location-title"
+        class="font-display text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl"
+      >
+        Lokasi &amp; workshop
+      </h2>
+      <p class="text-sm leading-relaxed text-slate-700 sm:text-base">
+        Kamu bisa melihat langsung beberapa koleksi Mamata di workshop kecil kami, atau mengambil
+        pesanan pre-order di sini.
+      </p>
+
+      <div class="space-y-3 rounded-2xl bg-white/80 p-4 text-sm text-slate-700 shadow-sm shadow-sage-200/70">
+        <div class="flex items-start gap-3">
+          <MapPin class="mt-0.5 h-4 w-4 text-terracotta-600" />
+          <div>
+            <p class="font-medium text-slate-900">Mamata Studio</p>
+            <p class="mt-1 text-sm text-slate-700">
+              Jl. Anyelir No. 12, Kel. Cempaka, Kec. Sukamaju, Bandung, Jawa Barat 40123
+            </p>
+          </div>
+        </div>
+        <p class="text-xs text-slate-600">
+          Buka untuk kunjungan terjadwal. Silakan hubungi kami via WhatsApp terlebih dahulu.
+        </p>
+      </div>
+    </div>
+
+    <div class="space-y-3 animate-fade-up" style="animation-delay: 0.12s">
+      <div
+        class="overflow-hidden rounded-2xl bg-slate-100 shadow-sm shadow-sage-200/70 ring-1 ring-sage-100/60"
+      >
+        <iframe
+          title="Lokasi Mamata di Google Maps"
+          src="https://www.google.com/maps?q=-6.90389,107.61861&z=15&output=embed"
+          loading="lazy"
+          class="h-64 w-full border-0 sm:h-72 lg:h-80"
+        />
+      </div>
+      <p class="text-xs text-slate-500">
+        Peta di atas merupakan ilustrasi lokasi. Detail alamat akan dikonfirmasi kembali setelah
+        pemesanan.
+      </p>
+    </div>
+  </section>
+
+  <section
+    id="contact"
+    aria-labelledby="contact-title"
+    class="mt-20 grid gap-6 border-t border-sage-100 pt-14 md:grid-cols-3"
+  >
+    <div class="md:col-span-1 animate-fade-up" style="animation-delay: 0.05s">
+      <h2
+        id="contact-title"
+        class="font-display text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl"
+      >
+        Hubungi Mamata
+      </h2>
+      <p class="mt-3 text-sm leading-relaxed text-slate-700 sm:text-base">
+        Punya ide tas rajut impianmu sendiri? Ceritakan pada kami, mari kita rajut bersama.
+      </p>
+    </div>
+
+    <div class="space-y-4 md:col-span-2">
+      <div
+        class="animate-fade-up rounded-2xl bg-white/80 p-4 text-sm text-slate-700 shadow-sm shadow-sage-200/70 ring-1 ring-sage-100/60 md:flex md:items-center md:justify-between md:gap-4"
+        style="animation-delay: 0.08s"
+      >
+        <div class="flex items-center gap-3">
+          <Phone class="h-5 w-5 text-terracotta-600" />
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-wide text-sage-700">WhatsApp</p>
+            <p class="text-sm font-medium text-slate-900">+62 812-3456-7890</p>
+          </div>
+        </div>
+        <a
+          href="https://wa.me/6281234567890"
+          class="mt-3 inline-flex items-center justify-center rounded-full bg-terracotta-500 px-4 py-2 text-xs font-semibold text-white shadow-md shadow-terracotta-500/40 transition hover:-translate-y-0.5 hover:bg-terracotta-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta-400 md:mt-0"
+        >
+          Kirim pesan sekarang
+        </a>
+      </div>
+
+      <div
+        class="animate-fade-up grid gap-4 text-sm text-slate-700 sm:grid-cols-2"
+        style="animation-delay: 0.12s"
+      >
+        <div class="rounded-2xl bg-white/80 p-4 shadow-sm shadow-sage-200/70">
+          <p class="text-xs font-semibold uppercase tracking-wide text-sage-700">Instagram</p>
+          <p class="mt-1 text-sm font-medium text-slate-900">@mamatastudio</p>
+          <p class="mt-1 text-xs text-slate-600">
+            Intip proses merajut, behind-the-scenes, dan koleksi terbaru.
+          </p>
+          <a
+            href="https://instagram.com/"
+            class="mt-3 inline-flex text-xs font-semibold text-terracotta-600 underline-offset-4 hover:underline"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Buka Instagram
+          </a>
+        </div>
+
+        <div class="rounded-2xl bg-white/80 p-4 shadow-sm shadow-sage-200/70">
+          <p class="text-xs font-semibold uppercase tracking-wide text-sage-700">TikTok</p>
+          <p class="mt-1 text-sm font-medium text-slate-900">@mamatastudio</p>
+          <p class="mt-1 text-xs text-slate-600">
+            Lihat video pendek seputar tips merawat tas rajut dan inspirasi styling.
+          </p>
+          <a
+            href="https://tiktok.com/@"
+            class="mt-3 inline-flex text-xs font-semibold text-terracotta-600 underline-offset-4 hover:underline"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Buka TikTok
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+

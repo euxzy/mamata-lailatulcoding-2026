@@ -1,0 +1,142 @@
+---
+import "../styles/global.css";
+import { ViewTransitions } from "astro:transitions";
+
+import Leaf from "@lucide/astro/icons/leaf";
+import Instagram from "@lucide/astro/icons/instagram";
+import Video from "@lucide/astro/icons/video";
+import MessageCircle from "@lucide/astro/icons/message-circle";
+
+const {
+  title = "Mamata — Tas Rajut dari Kain Sisa",
+  description = "Brand UMKM yang menghadirkan tas rajut dan gantungan kunci dari kain sisa, ramah lingkungan dan penuh cerita.",
+} = Astro.props;
+
+const pathname = Astro.url.pathname;
+
+const navItems = [
+  { href: "/", label: "Home" },
+  { href: "/gallery", label: "Gallery" },
+  { href: "/blog", label: "Articles" },
+];
+---
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <ViewTransitions />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="min-h-screen bg-sage-50 text-slate-900 antialiased">
+    <header class="sticky top-0 z-40 border-b border-white/20 bg-sage-50/80 backdrop-blur-xl">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
+        <a href="/" class="flex items-center gap-3">
+          <span
+            class="flex h-10 w-10 items-center justify-center rounded-full bg-terracotta-500/10 text-terracotta-600 shadow-sm"
+            aria-hidden="true"
+          >
+            <Leaf class="h-5 w-5" />
+          </span>
+          <div class="leading-tight">
+            <span class="font-display text-xl font-semibold tracking-wide">Mamata</span>
+            <span class="block text-xs text-slate-600">Tas Rajut Upcycle &amp; Aksesoris</span>
+          </div>
+        </a>
+
+        <button
+          class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-sage-100 bg-sage-50/80 text-slate-700 shadow-sm shadow-sage-200/60 outline-none ring-terracotta-400 transition hover:-translate-y-0.5 hover:bg-sage-100 hover:text-terracotta-600 focus-visible:ring-2 sm:hidden"
+          type="button"
+          aria-label="Menu (belum diaktifkan)"
+        >
+          <span class="sr-only">Menu</span>
+          <span class="h-0.5 w-4 rounded-full bg-current"></span>
+        </button>
+
+        <div class="hidden items-center gap-6 text-sm font-medium sm:flex">
+          {navItems.map((item) => (
+            <a
+              href={item.href}
+              class:list={["nav-link", pathname === item.href && "nav-link-active"]}
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
+
+        <a
+          href="https://wa.me/6281234567890"
+          class="hidden items-center gap-2 rounded-full bg-terracotta-500 px-3 py-1.5 text-xs font-semibold text-white shadow-lg shadow-terracotta-500/40 transition hover:scale-105 hover:bg-terracotta-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta-400 sm:inline-flex"
+          aria-label="Chat WhatsApp Mamata"
+        >
+          <MessageCircle class="h-4 w-4" />
+          <span>Chat WhatsApp</span>
+        </a>
+      </nav>
+    </header>
+
+    <main class="mx-auto max-w-6xl px-4 pb-20 pt-10 sm:px-6">
+      <slot />
+    </main>
+
+    <footer class="border-t border-white/10 bg-sage-100/70">
+      <div
+        class="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-6 text-sm text-slate-700 sm:flex-row sm:items-center sm:justify-between sm:px-6"
+      >
+        <div>
+          <p class="font-display text-base font-semibold text-slate-900">
+            Mamata — Tas Rajut dari Kain Sisa
+          </p>
+          <p class="mt-1 text-xs text-slate-600">
+            Dibuat dengan tangan, dirajut dari kain sisa yang diberi kehidupan baru.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <a
+            href="https://instagram.com/"
+            class="inline-flex items-center gap-2 text-slate-700 transition hover:text-terracotta-600"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Instagram class="h-4 w-4" />
+            <span class="text-xs font-medium">@mamatastudio</span>
+          </a>
+
+          <a
+            href="https://tiktok.com/@"
+            class="inline-flex items-center gap-2 text-slate-700 transition hover:text-terracotta-600"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Video class="h-4 w-4" />
+            <span class="text-xs font-medium">@mamatastudio</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="https://wa.me/6281234567890"
+      class="fixed bottom-5 right-5 inline-flex items-center gap-2 rounded-full bg-terracotta-500 px-4 py-2 text-sm font-semibold text-white shadow-xl shadow-terracotta-500/40 transition hover:scale-105 hover:bg-terracotta-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta-400"
+      aria-label="Chat WhatsApp Mamata via WhatsApp"
+    >
+      <MessageCircle class="h-4 w-4" />
+      <span>WhatsApp</span>
+    </a>
+  </body>
+</html>
+
