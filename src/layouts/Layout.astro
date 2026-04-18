@@ -36,28 +36,28 @@ const navItems = [
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
   </head>
-  <body class="min-h-screen bg-sage-50 text-slate-900 antialiased">
-    <header class="sticky top-0 z-40 border-b border-white/20 bg-sage-50/80 backdrop-blur-xl">
+  <body class="min-h-screen antialiased">
+    <header class="sticky top-0 z-40 border-b border-mamata-gold-light/20 bg-mamata-navy/80 backdrop-blur-xl">
       <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
         <a href="/" class="flex items-center gap-3">
           <span
-            class="flex h-10 w-10 items-center justify-center rounded-full bg-terracotta-500/10 text-terracotta-600 shadow-sm"
+            class="flex h-10 w-10 items-center justify-center rounded-full bg-mamata-gold-light/10 text-mamata-gold-light shadow-sm"
             aria-hidden="true"
           >
             <Leaf class="h-5 w-5" />
           </span>
           <div class="leading-tight">
-            <span class="font-display text-xl font-semibold tracking-wide">Mamata</span>
-            <span class="block text-xs text-slate-600">Tas Rajut Upcycle &amp; Aksesoris</span>
+            <span class="font-display text-xl font-semibold tracking-wide text-mamata-white">Mamata</span>
+            <span class="block text-xs text-mamata-grey">Tas Rajut Upcycle &amp; Aksesoris</span>
           </div>
         </a>
 
         <button
-          class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-sage-100 bg-sage-50/80 text-slate-700 shadow-sm shadow-sage-200/60 outline-none ring-terracotta-400 transition hover:-translate-y-0.5 hover:bg-sage-100 hover:text-terracotta-600 focus-visible:ring-2 sm:hidden"
+          class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-mamata-gold-light/20 bg-navy-800/80 text-mamata-grey shadow-sm shadow-black/20 outline-none ring-mamata-gold-light transition hover:-translate-y-0.5 hover:bg-navy-800 hover:text-mamata-gold-light focus-visible:ring-2 sm:hidden"
           type="button"
           aria-label="Menu (belum diaktifkan)"
         >
@@ -78,7 +78,7 @@ const navItems = [
 
         <a
           href="https://wa.me/6282218864531"
-          class="hidden items-center gap-2 rounded-full bg-terracotta-500 px-3 py-1.5 text-xs font-semibold text-white shadow-lg shadow-terracotta-500/40 transition hover:scale-105 hover:bg-terracotta-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta-400 sm:inline-flex"
+          class="hidden items-center gap-2 rounded-full bg-mamata-gold-light px-3 py-1.5 text-xs font-semibold text-mamata-navy shadow-lg shadow-mamata-gold-light/20 transition hover:scale-105 hover:bg-mamata-gold-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mamata-gold-light sm:inline-flex"
           aria-label="Chat WhatsApp Mamata"
         >
           <MessageCircle class="h-4 w-4" />
@@ -91,15 +91,15 @@ const navItems = [
       <slot />
     </main>
 
-    <footer class="border-t border-white/10 bg-sage-100/70">
+    <footer class="border-t border-mamata-gold-light/20 bg-navy-950/70">
       <div
-        class="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-6 text-sm text-slate-700 sm:flex-row sm:items-center sm:justify-between sm:px-6"
+        class="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-6 text-sm text-mamata-grey sm:flex-row sm:items-center sm:justify-between sm:px-6"
       >
         <div>
-          <p class="font-display text-base font-semibold text-slate-900">
+          <p class="font-display text-base font-semibold text-mamata-white">
             Mamata — Tas Rajut dari Kain Sisa
           </p>
-          <p class="mt-1 text-xs text-slate-600">
+          <p class="mt-1 text-xs text-mamata-grey">
             Dibuat dengan tangan, dirajut dari kain sisa yang diberi kehidupan baru.
           </p>
         </div>
@@ -107,22 +107,22 @@ const navItems = [
         <div class="flex items-center gap-4">
           <a
             href="https://www.instagram.com/mamatacraft/"
-            class="inline-flex items-center gap-2 text-slate-700 transition hover:text-terracotta-600"
+            class="inline-flex items-center gap-2 text-mamata-grey transition hover:text-mamata-gold-light"
             target="_blank"
             rel="noreferrer"
           >
             <Instagram class="h-4 w-4" />
-            <span class="text-xs font-medium">@mamatastudio</span>
+            <span class="text-xs font-medium">@mamatacraft</span>
           </a>
 
           <a
             href="https://www.tiktok.com/@mamatacraft"
-            class="inline-flex items-center gap-2 text-slate-700 transition hover:text-terracotta-600"
+            class="inline-flex items-center gap-2 text-mamata-grey transition hover:text-mamata-gold-light"
             target="_blank"
             rel="noreferrer"
           >
             <Video class="h-4 w-4" />
-            <span class="text-xs font-medium">@mamatastudio</span>
+            <span class="text-xs font-medium">@mamatacraft</span>
           </a>
         </div>
       </div>
@@ -130,7 +130,7 @@ const navItems = [
 
     <a
       href="https://wa.me/6282218864531"
-      class="fixed bottom-5 right-5 inline-flex items-center gap-2 rounded-full bg-terracotta-500 px-4 py-2 text-sm font-semibold text-white shadow-xl shadow-terracotta-500/40 transition hover:scale-105 hover:bg-terracotta-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta-400"
+      class="fixed bottom-5 right-5 inline-flex items-center gap-2 rounded-full bg-mamata-gold-light px-4 py-2 text-sm font-semibold text-mamata-navy shadow-xl shadow-mamata-gold-light/20 transition hover:scale-105 hover:bg-mamata-gold-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mamata-gold-light"
       aria-label="Chat WhatsApp Mamata via WhatsApp"
     >
       <MessageCircle class="h-4 w-4" />
@@ -138,4 +138,3 @@ const navItems = [
     </a>
   </body>
 </html>
-
