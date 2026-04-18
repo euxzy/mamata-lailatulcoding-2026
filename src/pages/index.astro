@@ -8,161 +8,94 @@ import Sparkles from "@lucide/astro/icons/sparkles";
 ---
 
 <Layout
-  title="Mamata — Tas Rajut dari Kain Sisa & Gantungan Kunci Rajut"
-  description="UMKM yang menghadirkan tas rajut dan gantungan kunci rajut dari kain sisa, dirajut dengan penuh ketelatenan untuk pecinta gaya hidup berkelanjutan."
+  title="Mamata Craft — Eksplorasi Rajut dari Limbah Tekstil Berkelanjutan"
+  description="Menghadirkan fesyen berkelanjutan melalui karya rajut eksklusif dari olahan limbah tekstil. Dibuat dengan bangga untuk memberdayakan perempuan dan menjaga bumi."
 >
   <section
     aria-labelledby="hero-title"
-    class="grid items-center gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]"
+    class="max-w-4xl py-10 lg:py-16"
   >
-    <div class="space-y-6 animate-fade-up" style="animation-delay: 0.05s">
+    <div class="space-y-8 animate-fade-up" style="animation-delay: 0.05s">
       <p class="inline-flex items-center gap-2 rounded-full bg-mamata-gold-light/10 px-3 py-1 text-xs font-medium text-mamata-gold-light ring-1 ring-mamata-gold-light/30">
         <Sparkles class="h-3.5 w-3.5" />
-        Upcycled crochet • Handmade dengan hati
+        Sustainable Fashion • Pemberdayaan Perempuan
       </p>
 
       <h1
         id="hero-title"
-        class="font-display text-3xl font-semibold tracking-tight text-mamata-white sm:text-4xl lg:text-5xl"
+        class="font-display text-4xl font-semibold tracking-tight text-mamata-white sm:text-5xl lg:text-6xl lg:leading-[1.15]"
       >
-        Rajutan hangat
-        <span class="text-gradient-gold">dari kain sisa</span>
-        untuk gaya yang lebih sadar.
+        Elegansi rajutan dari 
+        <span class="text-gradient-gold">olahan limbah tekstil</span>
+        untuk gaya hidup berkelanjutan.
       </h1>
 
-      <p class="max-w-xl text-sm leading-relaxed text-mamata-grey sm:text-base">
-        Mamata merajut kembali potongan kain sisa menjadi tas dan gantungan kunci yang
-        fungsional, estetis, dan penuh cerita. Setiap jahitan menyelamatkan limbah tekstil dan
-        mendukung pengrajin lokal.
+      <p class="max-w-2xl text-base leading-relaxed text-mamata-grey sm:text-lg">
+        Mamata mengolah kembali material tekstil menjadi tas dan aksesori yang 
+        eksklusif, artistik, dan bermakna. Setiap simpulnya merajut harapan bagi kelestarian lingkungan dan kemandirian pengrajin perempuan lokal.
       </p>
 
-      <div class="flex flex-wrap items-center gap-3">
+      <div class="flex flex-wrap items-center gap-3 pt-2">
         <a
           href="https://wa.me/6282218864531"
-          class="inline-flex items-center gap-2 rounded-full bg-mamata-gold-light px-5 py-2.5 text-sm font-semibold text-mamata-navy shadow-lg shadow-mamata-gold-light/20 transition hover:-translate-y-0.5 hover:bg-mamata-gold-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mamata-gold-light"
+          class="inline-flex items-center gap-2 rounded-full bg-mamata-gold-light px-6 py-3 text-sm font-semibold text-mamata-navy shadow-lg shadow-mamata-gold-light/20 transition hover:-translate-y-0.5 hover:bg-mamata-gold-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mamata-gold-light"
         >
           <Phone class="h-4 w-4" />
-          Konsultasi pesanan custom
+          Konsultasi Pesanan Khusus
         </a>
       </div>
 
-      <dl class="grid max-w-lg grid-cols-3 gap-4 text-xs sm:text-sm">
-        <div>
-          <dt class="font-semibold text-mamata-white">Zero waste mindset</dt>
-          <dd class="mt-1 text-mamata-grey">Mengolah kain sisa industri garmen menjadi produk baru.</dd>
+      <dl class="grid max-w-2xl grid-cols-1 gap-6 pt-6 text-sm sm:grid-cols-3">
+        <div class="border-l border-mamata-gold-light/20 pl-4">
+          <dt class="font-semibold text-mamata-white">Limbah Berharga</dt>
+          <dd class="mt-1 text-mamata-grey">Transformasi material sisa garmen menjadi karya fesyen bernilai tinggi.</dd>
         </div>
-        <div>
-          <dt class="font-semibold text-mamata-white">Buatan tangan</dt>
-          <dd class="mt-1 text-mamata-grey">Dirajut perlahan oleh pengrajin lokal berpengalaman.</dd>
+        <div class="border-l border-mamata-gold-light/20 pl-4">
+          <dt class="font-semibold text-mamata-white">Karya Tangan</dt>
+          <dd class="mt-1 text-mamata-grey">Dibuat secara manual dengan ketelitian tinggi oleh perempuan berdaya.</dd>
         </div>
-        <div>
-          <dt class="font-semibold text-mamata-white">Edisi terbatas</dt>
-          <dd class="mt-1 text-mamata-grey">Setiap motif unik mengikuti tekstur dan warna kain.</dd>
+        <div class="border-l border-mamata-gold-light/20 pl-4">
+          <dt class="font-semibold text-mamata-white">Eksklusif & Unik</dt>
+          <dd class="mt-1 text-mamata-grey">Setiap produk memiliki karakter unik yang tidak akan pernah sama.</dd>
         </div>
       </dl>
-    </div>
-
-    <div class="relative animate-fade-up" style="animation-delay: 0.12s">
-      <div
-        class="pointer-events-none absolute -left-4 -top-4 h-20 w-20 rounded-full bg-mamata-gold-light/10 blur-3xl"
-        aria-hidden="true"
-      />
-      <div
-        class="pointer-events-none absolute -bottom-6 -right-4 h-24 w-24 rounded-full bg-navy-800/40 blur-3xl"
-        aria-hidden="true"
-      />
-
-      <div
-        class="relative aspect-[4/5] overflow-hidden rounded-3xl bg-navy-950 shadow-xl shadow-black/40 ring-1 ring-mamata-gold-light/20"
-      >
-        <div
-          class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(212,175,55,0.15),_transparent_55%),radial-gradient(circle_at_bottom,_rgba(184,190,197,0.1),_transparent_55%)]"
-        />
-        <div class="relative flex h-full flex-col justify-between p-6 sm:p-8">
-          <div class="space-y-4">
-            <span
-              class="inline-flex items-center gap-2 rounded-full bg-navy-800/80 px-3 py-1 text-xs font-medium text-mamata-white shadow-sm ring-1 ring-white/10"
-            >
-              Koleksi unggulan
-            </span>
-            <p class="font-display text-2xl font-semibold text-mamata-white">
-              Tas rajut elegan untuk teman keseharianmu.
-            </p>
-          </div>
-          <div class="grid gap-3 text-xs sm:text-sm">
-            <div
-              class="flex items-center justify-between rounded-2xl bg-navy-800/60 px-3 py-3 shadow-sm ring-1 ring-white/10 backdrop-blur"
-            >
-              <div>
-                <p class="font-medium text-mamata-white">Tas Rajut dari Kain Sisa</p>
-                <p class="text-[11px] text-mamata-grey">
-                  Kombinasi warna elegan yang lembut dan timeless.
-                </p>
-              </div>
-              <span class="rounded-full bg-mamata-gold-light/10 px-3 py-1 text-[11px] font-semibold text-mamata-gold-light">
-                Everyday bag
-              </span>
-            </div>
-
-            <div
-              class="flex items-center justify-between rounded-2xl bg-navy-800/60 px-3 py-3 shadow-sm ring-1 ring-white/10 backdrop-blur"
-            >
-              <div>
-                <p class="font-medium text-mamata-white">Gantungan Kunci Rajut</p>
-                <p class="text-[11px] text-mamata-grey">
-                  Detail kecil yang membuat tasmu makin personal.
-                </p>
-              </div>
-              <span
-                class="rounded-full bg-mamata-gold-light/10 px-3 py-1 text-[11px] font-semibold text-mamata-gold-light"
-              >
-                Small batch
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
   <section
     id="about"
     aria-labelledby="about-title"
-    class="mt-20 grid gap-10 border-t border-mamata-gold-light/20 pt-14 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]"
+    class="mt-10 grid gap-10 border-t border-mamata-gold-light/20 pt-14 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]"
   >
     <div class="space-y-4 animate-fade-up" style="animation-delay: 0.05s">
       <h2
         id="about-title"
         class="font-display text-2xl font-semibold tracking-tight text-mamata-white sm:text-3xl"
       >
-        Tentang Mamata
+        Filosofi Mamata Craft
       </h2>
       <p class="text-sm leading-relaxed text-mamata-grey sm:text-base">
-        Mamata lahir dari kegelisahan melihat tumpukan kain sisa produksi garmen yang berakhir
-        sebagai limbah. Alih-alih dibuang, potongan-potongan ini kami pilah, padukan, lalu
-        dirajut ulang menjadi tas dan aksesoris yang elegan dan fungsional.
+        Lahir dari semangat untuk memberikan napas baru pada material yang terlupakan, Mamata Craft hadir sebagai wujud nyata dari fesyen yang bertanggung jawab. Kami mengkurasi potongan material garmen berkualitas, lalu merajutnya kembali menjadi aksesori yang chic dan fungsional.
       </p>
       <p class="text-sm leading-relaxed text-mamata-grey sm:text-base">
-        Setiap produk dirancang dalam jumlah terbatas, mengikuti tekstur, warna, dan karakter kain
-        sisa yang tersedia. Hasilnya adalah koleksi yang tidak hanya cantik, tetapi juga membawa
-        cerita keberlanjutan yang bisa kamu bawa ke mana pun.
+        Bagi kami, keberlanjutan bukan hanya soal lingkungan, tapi juga kemanusiaan. Setiap produk yang Anda bawa adalah simbol dukungan bagi para perajut perempuan lokal yang bekerja dengan tulus dari rumah mereka.
       </p>
 
       <div class="mt-4 grid gap-4 text-sm sm:grid-cols-3">
         <div class="mamata-card rounded-2xl">
-          <p class="text-xs font-semibold uppercase tracking-wide text-mamata-gold-light">Nilai kami</p>
-          <p class="mt-1 font-medium text-mamata-white">Hangat, tulus, dan berkelanjutan.</p>
+          <p class="text-xs font-semibold uppercase tracking-wide text-mamata-gold-light">Visi Kami</p>
+          <p class="mt-1 font-medium text-mamata-white">Mewujudkan gaya hidup yang bangga akan produk lokal berkelanjutan.</p>
         </div>
         <div class="mamata-card rounded-2xl">
-          <p class="text-xs font-semibold uppercase tracking-wide text-mamata-gold-light">Bahan baku</p>
+          <p class="text-xs font-semibold uppercase tracking-wide text-mamata-gold-light">Kualitas</p>
           <p class="mt-1 font-medium text-mamata-white">
-            Kain sisa pilihan, benang rajut, dan aksen yang elegan.
+            Material pilihan dengan standar rajutan yang rapi dan kuat.
           </p>
         </div>
         <div class="mamata-card rounded-2xl">
-          <p class="text-xs font-semibold uppercase tracking-wide text-mamata-gold-light">Produk</p>
+          <p class="text-xs font-semibold uppercase tracking-wide text-mamata-gold-light">Dampak</p>
           <p class="mt-1 font-medium text-mamata-white">
-            Tas rajut sehari-hari & gantungan kunci rajut untuk menemani langkahmu.
+            Setiap pembelian berkontribusi pada pengurangan limbah tekstil nasional.
           </p>
         </div>
       </div>
@@ -171,17 +104,14 @@ import Sparkles from "@lucide/astro/icons/sparkles";
     <div class="space-y-4 animate-fade-up" style="animation-delay: 0.12s">
       <div class="inline-flex items-center gap-2 rounded-full bg-mamata-gold-light/10 px-3 py-1 text-xs ring-1 ring-mamata-gold-light/20">
         <Recycle class="h-4 w-4 text-mamata-gold-light" />
-        <span class="font-medium text-mamata-gold-light">Dari kain sisa, jadi karya berharga.</span>
+        <span class="font-medium text-mamata-gold-light">Recycle • Proud • Elegant</span>
       </div>
       <div class="space-y-3 text-sm text-mamata-grey">
         <p>
-          Proses produksi Mamata dilakukan secara lokal bersama perajut yang bekerja dari rumah
-          masing-masing. Dengan begitu, mereka dapat tetap dekat dengan keluarga sambil terus
-          berkarya.
+          Kami memastikan setiap proses produksi Mamata dilakukan secara etis. Perajut kami diberikan ruang untuk tetap dekat dengan keluarga sambil terus mengekspresikan kreativitas mereka melalui simpul rajutan.
         </p>
         <p>
-          Kami percaya bahwa produk yang baik tidak hanya nyaman dipakai, tetapi juga membawa dampak
-          positif bagi lingkungan dan orang-orang di baliknya.
+          Kami percaya bahwa kemewahan sejati terletak pada cerita di balik produk yang kita pakai—cerita tentang ketulusan, keberlanjutan, dan harapan.
         </p>
       </div>
     </div>
@@ -197,11 +127,10 @@ import Sparkles from "@lucide/astro/icons/sparkles";
         id="location-title"
         class="font-display text-2xl font-semibold tracking-tight text-mamata-white sm:text-3xl"
       >
-        Lokasi & workshop
+        Kunjungi Workshop Kami
       </h2>
       <p class="text-sm leading-relaxed text-mamata-grey sm:text-base">
-        Kamu bisa melihat langsung beberapa koleksi Mamata di workshop kecil kami, atau mengambil
-        pesanan pre-order di sini.
+        Mari mengenal lebih dekat proses kreatif di balik setiap simpul rajutan kami. Anda dapat melihat koleksi terbaru secara langsung atau berkonsultasi untuk desain custom di workshop kami.
       </p>
 
         <a href="https://maps.app.goo.gl/PeLaN72BcJx7NeVC7">
@@ -209,9 +138,9 @@ import Sparkles from "@lucide/astro/icons/sparkles";
             <div class="flex items-start gap-3">
               <MapPin class="mt-0.5 h-4 w-4 text-mamata-gold-light" />
               <div>
-                <p class="font-medium text-mamata-white">Mamata Craft</p>
+                <p class="font-medium text-mamata-white">Mamata Craft Studio</p>
                 <p class="mt-1 text-sm text-mamata-grey">
-                  grand pinus regency blok andes 56, Kota Bandung, Jawa Barat 40294
+                  Grand Pinus Regency Blok Andes 56, Kota Bandung, Jawa Barat 40294
                 </p>
               </div>
             </div>
@@ -224,7 +153,7 @@ import Sparkles from "@lucide/astro/icons/sparkles";
         class="overflow-hidden rounded-2xl bg-navy-950 shadow-sm ring-1 ring-mamata-gold-light/20"
       >
         <iframe
-          title="Lokasi Mamata di Google Maps"
+          title="Lokasi Mamata Craft di Google Maps"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.6610441957127!2d107.68579369999999!3d-6.9310556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c33f83a5280d%3A0x1f0c9be0e3b7c7db!2sMamata%20Craft!5e0!3m2!1sen!2sid!4v1776495093609!5m2!1sen!2sid"
           loading="lazy"
           class="h-64 w-full border-0 opacity-90 grayscale invert sm:h-72 lg:h-80"
@@ -243,10 +172,10 @@ import Sparkles from "@lucide/astro/icons/sparkles";
         id="contact-title"
         class="font-display text-2xl font-semibold tracking-tight text-mamata-white sm:text-3xl"
       >
-        Hubungi Mamata
+        Mari Merajut Cerita Bersama
       </h2>
       <p class="mt-3 text-sm leading-relaxed text-mamata-grey sm:text-base">
-        Punya ide tas rajut impianmu sendiri? Ceritakan pada kami, mari kita rajut bersama.
+        Ingin memiliki aksesori rajut yang dirancang khusus untuk Anda? Sampaikan ide kreatif Anda, dan mari kita wujudkan menjadi karya yang berharga.
       </p>
     </div>
 
@@ -258,7 +187,7 @@ import Sparkles from "@lucide/astro/icons/sparkles";
         <div class="flex items-center gap-3">
           <Phone class="h-5 w-5 text-mamata-gold-light" />
           <div>
-            <p class="text-xs font-semibold uppercase tracking-wide text-mamata-gold-light">WhatsApp</p>
+            <p class="text-xs font-semibold uppercase tracking-wide text-mamata-gold-light">Konsultasi Melalui WhatsApp</p>
             <p class="text-sm font-medium text-mamata-white">+62 822 1886 4531</p>
           </div>
         </div>
@@ -266,7 +195,7 @@ import Sparkles from "@lucide/astro/icons/sparkles";
           href="https://wa.me/6282218864531"
           class="mt-3 inline-flex items-center justify-center rounded-full bg-mamata-gold-light px-4 py-2 text-xs font-semibold text-mamata-navy shadow-md transition hover:-translate-y-0.5 hover:bg-mamata-gold-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mamata-gold-light md:mt-0"
         >
-          Kirim pesan sekarang
+          Kirim Pesan Sekarang
         </a>
       </div>
 
@@ -284,7 +213,7 @@ import Sparkles from "@lucide/astro/icons/sparkles";
             target="_blank"
             rel="noreferrer"
           >
-            Buka Instagram
+            Lihat Koleksi Visual
           </a>
         </div>
 
@@ -298,7 +227,7 @@ import Sparkles from "@lucide/astro/icons/sparkles";
             target="_blank"
             rel="noreferrer"
           >
-            Buka TikTok
+            Ikuti Proses Kreatif
           </a>
         </div>
       </div>
