@@ -41,7 +41,7 @@ const navItems = [
     />
   </head>
   <body class="min-h-screen antialiased">
-    <header class="sticky top-0 z-40 border-b border-mamata-gold-light/20 bg-mamata-navy/80 backdrop-blur-xl">
+    <header class="relative sticky top-0 z-40 border-b border-mamata-gold-light/20 bg-mamata-navy/80 backdrop-blur-xl">
       <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
         <a href="/" class="flex items-center gap-3">
           <span
@@ -55,15 +55,6 @@ const navItems = [
             <span class="block text-xs text-mamata-grey">Tas Rajut Upcycle &amp; Aksesoris</span>
           </div>
         </a>
-
-        <button
-          class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-mamata-gold-light/20 bg-navy-800/80 text-mamata-grey shadow-sm shadow-black/20 outline-none ring-mamata-gold-light transition hover:-translate-y-0.5 hover:bg-navy-800 hover:text-mamata-gold-light focus-visible:ring-2 sm:hidden"
-          type="button"
-          aria-label="Menu (belum diaktifkan)"
-        >
-          <span class="sr-only">Menu</span>
-          <span class="h-0.5 w-4 rounded-full bg-current"></span>
-        </button>
 
         <div class="hidden items-center gap-6 text-sm font-medium sm:flex">
           {navItems.map((item) => (
@@ -84,7 +75,45 @@ const navItems = [
           <MessageCircle class="h-4 w-4" />
           <span>Chat WhatsApp</span>
         </a>
+
+        <button
+          id="mobile-menu-btn"
+          class="inline-flex h-9 w-9 flex-col items-center justify-center gap-1.5 rounded-full border border-mamata-gold-light/20 bg-navy-800/80 text-mamata-gold-light shadow-sm shadow-black/20 outline-none ring-mamata-gold-light transition hover:bg-navy-800 focus-visible:ring-2 sm:hidden"
+          type="button"
+          aria-label="Buka Menu"
+        >
+          <span class="h-0.5 w-4 rounded-full bg-current transition-transform"></span>
+          <span class="h-0.5 w-4 rounded-full bg-current transition-transform"></span>
+        </button>
       </nav>
+
+      <div
+        id="mobile-menu"
+        class="absolute left-0 top-full hidden w-full flex-col border-b border-mamata-gold-light/20 bg-navy-900/95 px-4 py-6 shadow-xl backdrop-blur-xl sm:hidden"
+      >
+        <div class="flex flex-col gap-4">
+          {navItems.map((item) => (
+            <a
+              href={item.href}
+              class:list={[
+                "block text-base font-medium transition-colors",
+                pathname === item.href ? "text-mamata-gold-light" : "text-mamata-white hover:text-mamata-gold-light"
+              ]}
+            >
+              {item.label}
+            </a>
+          ))}
+          <div class="mt-4 border-t border-mamata-gold-light/20 pt-4">
+            <a
+              href="https://wa.me/6282218864531"
+              class="inline-flex w-fit items-center gap-2 rounded-full bg-mamata-gold-light px-4 py-2 text-sm font-semibold text-mamata-navy transition hover:bg-mamata-gold-dark"
+            >
+              <MessageCircle class="h-4 w-4" />
+              <span>Konsultasi WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
     </header>
 
     <main class="mx-auto max-w-6xl px-4 pb-20 pt-10 sm:px-6">
@@ -130,11 +159,27 @@ const navItems = [
 
     <a
       href="https://wa.me/6282218864531"
-      class="fixed bottom-5 right-5 inline-flex items-center gap-2 rounded-full bg-mamata-gold-light px-4 py-2 text-sm font-semibold text-mamata-navy shadow-xl shadow-mamata-gold-light/20 transition hover:scale-105 hover:bg-mamata-gold-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mamata-gold-light"
+      class="fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 rounded-full bg-mamata-gold-light px-4 py-2 text-sm font-semibold text-mamata-navy shadow-xl shadow-mamata-gold-light/20 transition hover:scale-105 hover:bg-mamata-gold-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mamata-gold-light"
       aria-label="Chat WhatsApp Mamata via WhatsApp"
     >
       <MessageCircle class="h-4 w-4" />
       <span>WhatsApp</span>
     </a>
+
+    <script>
+      // Kita menggunakan 'astro:page-load' karena ada ViewTransitions
+      document.addEventListener('astro:page-load', () => {
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        if (btn && menu) {
+          btn.addEventListener('click', () => {
+            // Toggle class 'hidden' dan 'flex'
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+          });
+        }
+      });
+    </script>
   </body>
 </html>
