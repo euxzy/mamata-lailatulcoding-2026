@@ -9,7 +9,7 @@ const items = [
     title: "Tas Rajut Sage & Terracotta",
     category: "Tas Rajut dari Kain Sisa",
     image:
-      "https://images.unsplash.com/photo-1528701800489-20be3c30c1d5?auto=format&fit=crop&w=1200&q=80",
+      "images/CATALOGUE MAMATA CRAFT_page-0002.jpg",
     description:
       "Tas rajut selempang dengan kombinasi warna sage dan terracotta, cocok untuk dipakai sehari-hari.",
   },
@@ -18,7 +18,7 @@ const items = [
     title: "Mini Bucket Bag Beige",
     category: "Tas Rajut dari Kain Sisa",
     image:
-      "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=1200&q=80",
+      "images/CATALOGUE MAMATA CRAFT_page-0003.jpg",
     description:
       "Tas bucket mini dengan tekstur rajut tebal, pas untuk membawa dompet dan handphone.",
   },
@@ -27,7 +27,7 @@ const items = [
     title: "Gantungan Kunci Bunga Rajut",
     category: "Gantungan Kunci Rajut",
     image:
-      "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=1200&q=80",
+      "images/CATALOGUE MAMATA CRAFT_page-0004.jpg",
     description:
       "Gantungan kunci motif bunga dengan kombinasi benang warna pastel yang lembut.",
   },
@@ -36,7 +36,7 @@ const items = [
     title: "Gantungan Kunci Motif Daun",
     category: "Gantungan Kunci Rajut",
     image:
-      "https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=1200&q=80",
+      "images/CATALOGUE MAMATA CRAFT_page-0005.jpg",
     description:
       "Detail rajut berbentuk daun yang indah untuk menghias tas atau pouch favoritmu.",
   },
@@ -45,7 +45,7 @@ const items = [
     title: "Tote Rajut Natural",
     category: "Tas Rajut dari Kain Sisa",
     image:
-      "https://images.unsplash.com/photo-1523496922380-91fd19546c3d?auto=format&fit=crop&w=1200&q=80",
+      "images/CATALOGUE MAMATA CRAFT_page-0006.jpg",
     description:
       "Tote bag rajut ukuran medium dengan warna natural yang mudah dipadukan dengan berbagai gaya.",
   },
@@ -54,7 +54,7 @@ const items = [
     title: "Detail Tekstur Rajut",
     category: "Detail Rajutan",
     image:
-      "https://images.unsplash.com/photo-1552895638-3c2b80b0c012?auto=format&fit=crop&w=1200&q=80",
+      "images/CATALOGUE MAMATA CRAFT_page-0007.jpg",
     description:
       "Close-up tekstur rajutan yang menunjukkan perpaduan benang dan kain sisa yang rapi.",
   },
@@ -96,25 +96,9 @@ const items = [
             src={item.image}
             alt={item.title}
             loading="lazy"
-            class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            class="w-full object-scale-down transition-transform duration-500 group-hover:scale-105"
           />
-          <div
-            class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-900/35 via-slate-900/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-          />
-          <span
-            class="pointer-events-none absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-black/40 px-2.5 py-1 text-[11px] font-medium text-white backdrop-blur"
-          >
-            <Sparkles class="h-3.5 w-3.5" />
-            Lihat detail
-          </span>
-        </div>
 
-        <div class="flex flex-1 flex-col gap-2 px-4 py-4">
-          <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-sage-700">
-            {item.category}
-          </p>
-          <h2 class="font-display text-lg font-semibold text-slate-900">{item.title}</h2>
-        </div>
       </button>
     ))}
   </section>
@@ -124,52 +108,6 @@ const items = [
     class="backdrop:bg-black/40 open:animate-fade-up"
     aria-labelledby="gallery-dialog-title"
   >
-    <form method="dialog" class="fixed inset-0 flex items-center justify-center px-4 py-8">
-      <div
-        class="relative flex max-h-full w-full max-w-3xl flex-col overflow-hidden rounded-3xl bg-white/95 shadow-2xl shadow-slate-900/40 ring-1 ring-sage-100 backdrop-blur"
-      >
-        <button
-          type="submit"
-          class="absolute right-3 top-3 inline-flex h-8 w-8 items-center justify-center rounded-full bg-black/60 text-xs font-semibold text-white shadow-sm outline-none ring-terracotta-400 transition hover:-translate-y-0.5 hover:bg-black focus-visible:ring-2"
-          aria-label="Tutup pratinjau"
-        >
-          ✕
-        </button>
-
-        <div class="grid gap-0 md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)]">
-          <div class="bg-slate-100">
-            <img
-              id="gallery-dialog-image"
-              src=""
-              alt=""
-              class="h-72 w-full object-cover sm:h-80 md:h-full"
-            />
-          </div>
-
-          <div class="flex flex-col gap-3 p-5 text-sm text-slate-700">
-            <p
-              id="gallery-dialog-category"
-              class="text-[11px] font-semibold uppercase tracking-[0.18em] text-sage-700"
-            />
-            <h2
-              id="gallery-dialog-title"
-              class="font-display text-xl font-semibold text-slate-900 sm:text-2xl"
-            />
-            <p id="gallery-dialog-description" class="text-sm leading-relaxed text-slate-700" />
-
-            <div class="mt-3 flex flex-wrap gap-2 text-xs text-slate-500">
-              <span class="inline-flex items-center gap-1 rounded-full bg-sage-500/10 px-2.5 py-1">
-                <ImageIcon class="h-3.5 w-3.5" />
-                Foto ilustrasi produk
-              </span>
-              <span class="inline-flex items-center gap-1 rounded-full bg-terracotta-500/10 px-2.5 py-1">
-                Setiap produk bisa berbeda warna &amp; motif
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </form>
   </dialog>
 
   <script>

@@ -1,42 +1,46 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: "Cormorant Garamond", ui-serif, Georgia, "Times New Roman", serif;
-  --font-body: "Nunito Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
+  /* Font yang mencerminkan kesan elegan dan handmade */
+  --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
 
-  --color-sage-50: #f5f7f3;
-  --color-sage-100: #e4eadf;
-  --color-sage-300: #bcccb4;
-  --color-sage-500: #8fa58a;
+  /* Palet Warna Utama Mamata */
+  --color-mamata-navy: #10243e;       /* Biru gelap latar utama */
+  --color-mamata-gold-light: #d4af37;  /* Emas terang untuk aksen */
+  --color-mamata-gold-dark: #aa8a2e;   /* Emas gelap untuk hover/gradasi */
+  --color-mamata-grey: #b8bec5;       /* Abu-abu elegan dari box logo */
+  --color-mamata-white: #f8f9fa;      /* Putih bersih untuk teks */
 
-  --color-terracotta-100: #f6ddd4;
-  --color-terracotta-300: #e59b7a;
-  --color-terracotta-500: #c96a4a;
-  --color-terracotta-600: #aa4f34;
-
-  --color-beige-50: #fbf7f1;
-  --color-beige-100: #f3e7d7;
+  /* Warna tambahan untuk variasi */
+  --color-navy-800: #1a2e47;
+  --color-navy-950: #0b1a2d;
 }
 
 @layer base {
   body {
-    @apply bg-sage-50 font-body text-slate-900;
+    /* Mengikuti tema gambar: Latar Navy dengan teks putih/abu-abu terang */
+    @apply bg-mamata-navy font-body text-mamata-white antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display tracking-wide;
   }
 }
 
 @layer components {
+  /* Navigasi dengan aksen Gold sesuai garis di logo */
   .nav-link {
-    @apply relative text-sm font-medium text-slate-700 transition-colors;
+    @apply relative text-sm font-medium text-mamata-grey transition-colors duration-300;
   }
 
   .nav-link::after {
     content: "";
-    @apply pointer-events-none absolute inset-x-1 -bottom-1 h-px scale-x-0 rounded-full bg-terracotta-500 opacity-0 transition;
+    @apply pointer-events-none absolute inset-x-0 -bottom-1 h-0.5 scale-x-0 rounded-full bg-mamata-gold-light opacity-0 transition-transform duration-300;
   }
 
   .nav-link:hover {
-    @apply text-terracotta-600;
+    @apply text-mamata-gold-light;
   }
 
   .nav-link:hover::after {
@@ -44,15 +48,32 @@
   }
 
   .nav-link-active {
-    @apply text-terracotta-600;
+    @apply text-mamata-gold-light;
   }
 
   .nav-link-active::after {
     @apply scale-x-100 opacity-100;
   }
+
+  /* Komponen kartu atau box dengan border emas tipis seperti frame di logo */
+  .mamata-card {
+    @apply border border-mamata-gold-light/30 bg-navy-800/50 p-6 backdrop-blur-sm;
+  }
+
+  /* Button dengan gaya elegan */
+  .btn-primary {
+    @apply bg-mamata-gold-light px-6 py-2 text-sm font-semibold text-mamata-navy transition-all hover:bg-mamata-gold-dark;
+  }
 }
 
 @layer utilities {
+  /* Gradasi emas untuk teks atau border (seperti frame luar logo) */
+  .text-gradient-gold {
+    background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   .animate-fade-up {
     animation: fade-up 0.8s ease-out both;
   }
@@ -63,7 +84,6 @@
     opacity: 0;
     transform: translateY(16px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
